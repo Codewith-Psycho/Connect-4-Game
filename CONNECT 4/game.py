@@ -631,7 +631,7 @@ class GameGUI(tk.Tk):
 
     def change_difficulty(self, event):
         depth_map = {"easy": 2, "medium": 4, "hard": 6}
-        self.game.set_ai_depth(depth_map[self.difficulty.get()])
+        self.game.set_ai_depth(depth_map[self.difficulty.get().lower()])
         self.game.reset()
         self.draw_board()
         self.status.config(text="Human's turn")
